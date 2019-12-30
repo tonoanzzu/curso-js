@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+    <script>
+        $(document).ready(function() {
+            if (Modernizr.canvas) {
+                //alert("Tu navegador Si soporta Canvas")
+            } else {
+                alert("Tu navegador No soporta Canvas")
+                return
+            }
+
+            var canvas = document.getElementById("canvas1")
+            var ctx = canvas.getContext("2d")
+
+            //Obtener el centro del canvas
+            var centroX = canvas.width / 2
+            var centroY = canvas.height / 2
+            var radio = 50
+
+            ctx.beginPath()
+            ctx.arc(centroX, centroY, radio, 0, 2 * Math.PI, false)
+            ctx.lineWith = 5
+            ctx.strokeStyle = "yellow"
+            ctx.stroke()
+
+            ctx.fillStyle = "yellowgreen"
+            ctx.fill()
+
+
+
+
+
+        })
+    </script>
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Rectangulos con canvas</h1>
+    <canvas id="canvas1" width="600" height="400" style="border: dotted gray 1px">
+    tu navegador no soporta canvas
+  </canvas>
+
+</body>
+
+</html>
