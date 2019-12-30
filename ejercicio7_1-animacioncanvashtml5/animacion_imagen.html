@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+    <script>
+        var x = 0
+        var direccion = "derecha",
+            imagen
+        var canvas, ctx
+
+        $(document).ready(function() {
+            if (Modernizr.canvas) {
+                animar()
+            } else {
+                alert("Tu navegador No soporta Canvas")
+                return
+            }
+        })
+
+        function animar() {
+            imagen = new Image();
+            canvas = document.getElementById("canvas1")
+            ctx = canvas.getContext("2d")
+
+            imagen.onload = function() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height)
+                ctx.drawImage(imagen, x, 0)
+                actualizarDibujo()
+                setInterval(animar(), 100)
+            }
+
+            imagen.src = "images/descarga.png"
+
+        }
+
+        function actualizarDibujo() {
+            x++
+            if (x > ctx.canvas.width) {
+                x = 0
+            }
+        }
+    </script>
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Rectangulos con canvas</h1>
+    <canvas id="canvas1" width="600" height="400" style="border: dotted gray 1px">
+    tu navegador no soporta canvas
+  </canvas>
+
+</body>
+
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+    <script>
+        var x = 0,
+            y = 150,
+            anchoRect = 40
+        var direccion
+
+        $(document).ready(function() {
+            if (Modernizr.canvas) {
+                //alert("Tu navegador Si soporta Canvas")
+            } else {
+                alert("Tu navegador No soporta Canvas")
+                return
+            }
+
+            animar()
+
+        })
+
+
+        function animar() {
+            var canvas = document.getElementById("canvas1")
+            var ctx = canvas.getContext("2d")
+            ctx.clearRect(0, 0, canvas.width, canvas.height)
+            ctx.strokeStyle = "yellow"
+            ctx.fillStyle = "yellowgreen"
+            ctx.lineWidth = 5
+            ctx.fillRect(x, y, anchoRect, anchoRect)
+            ctx.strokeRect(x, y, anchoRect, anchoRect)
+
+            actualizarDibujo();
+            setTimeout("animar()", 1)
+        }
+
+        function actualizarDibujo() {
+            definirDireccion()
+            if (direccion === 'derecha') {
+                x++
+            } else {
+                x--
+            }
+        }
+
+        function definirDireccion() {
+            var canvas = document.getElementById("canvas1")
+            if (x == 0) {
+                direccion = 'derecha'
+            } else if (x == (canvas.width - anchoRect)) {
+                direccion = 'izquierda'
+            }
+
+        }
+    </script>
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Rectangulos con canvas</h1>
+    <canvas id="canvas1" width="600" height="400" style="border: dotted gray 1px">
+    tu navegador no soporta canvas
+  </canvas>
+
+</body>
+
+</html>
