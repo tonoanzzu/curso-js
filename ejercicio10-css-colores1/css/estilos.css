@@ -150,3 +150,9 @@ div.transbox p {
     font-size: 80%;
     color: #000;
 }
+
+#div13 {
+    /* Safari o chrome */
+    background: -webkit-gradient(linear, 0%, 0%, 0%, 100%, from(rgba(109, 0, 25, 1), to(rgba(200, 3, 31, 1))))
+    /* Estandar */
+}
