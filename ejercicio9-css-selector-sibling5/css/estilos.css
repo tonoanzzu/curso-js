@@ -1,0 +1,71 @@
+/* Selecciona el elemento a del atributo href que comience con http */
+
+a[href^=http] {
+    color: red;
+}
+
+
+/*Elemento a del atributo href termine con .html */
+
+a[href$=".html"] {
+    color: blueviolet;
+}
+
+
+/*Elemento a del atributo href termine con .html */
+
+a[href$=".png"] {
+    background: url(../images/descarga.png) no-repeat right;
+    padding-right: 25px;
+    color: darkred;
+}
+
+h1:first-child {
+    color: blue;
+}
+
+
+/* selecciona el ultimo elemento  */
+
+h1:last-of-type {
+    color: yellowgreen;
+}
+
+
+/* selecciona el primer elemento */
+
+li:first-child {
+    color: red;
+}
+
+
+/* selecciona el segundo elemento */
+
+li:nth-child(2) {
+    color: green;
+}
+
+
+/* Selecciona cada 3 elementos */
+
+li:nth-child(3n) {
+    color: purple;
+}
+
+
+/* Selecciona cada 3 elementos comenzando en 2do elemento*/
+
+li:nth-child(3n+2) {
+    color: pink;
+}
+
+
+/* Selecciona los elementos de manera inversa comenzando en 4to*/
+
+li:nth-child(-1n+4) {
+    color: goldenrod;
+}
+
+li:nth-last-child(1n+8) {
+    color: fuchsia;
+}

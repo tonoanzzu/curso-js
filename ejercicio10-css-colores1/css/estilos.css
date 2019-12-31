@@ -1,0 +1,152 @@
+.wrapper {
+    position: relative;
+    float: left;
+    left: 0;
+    width: 700px;
+    margin-bottom: 10px;
+}
+
+.left1 {
+    display: table;
+    position: relative;
+    float: left;
+    left: 5px;
+    width: 140px;
+    height: 100px;
+    border: 1px dashed grey;
+    padding: 5px;
+    text-align: center;
+    line-height: 20px;
+}
+
+.left2 {
+    display: table;
+    position: relative;
+    float: left;
+    left: 15px;
+    width: 140px;
+    height: 100px;
+    border: 1px dashed grey;
+    padding: 5px;
+    text-align: center;
+    line-height: 20px;
+}
+
+.left3 {
+    display: table;
+    position: relative;
+    float: left;
+    left: 25px;
+    width: 140px;
+    height: 100px;
+    border: 1px dashed grey;
+    padding: 5px;
+    text-align: center;
+    line-height: 20px;
+}
+
+.left4 {
+    display: table;
+    position: relative;
+    float: left;
+    left: 35px;
+    width: 140px;
+    height: 100px;
+    border: 1px dashed grey;
+    padding: 5px;
+    text-align: center;
+    line-height: 20px;
+}
+
+body {
+    border-width: 0px;
+    padding: 0px;
+    margin: 0px;
+    font-size: 90%;
+    color: white;
+}
+
+h1 {
+    color: red;
+}
+
+span {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#div1 {
+    background: #00FFFF;
+    color: gray;
+}
+
+#div2 {
+    background: #FF0;
+    color: gray;
+}
+
+#div3 {
+    background: rgb(198, 226, 255);
+    color: gray;
+}
+
+#div4 {
+    background: rgb(0%, 20%, 80%);
+}
+
+#div5 {
+    background-color: chocolate;
+}
+
+#div6 {
+    /*
+  1-color al 100%
+  0.5-color al 50%
+  0.0-color al 0%
+  */
+    background: rgb(198, 226, 255);
+    background: rgba(198, 226, 255, 0.25);
+    color: gray;
+}
+
+#div7 {
+    background: rgb(0%, 20%, 80%);
+    background: rgba(0%, 20%, 80%, 0.5)
+}
+
+#div8 {
+    background: hsl(270, 90%, 60%);
+}
+
+#div9 {
+    background: hsl(270, 90%, 80%, 0.5);
+}
+
+#div10 {
+    background: chocolate;
+    opacity: 0.5;
+}
+
+#div11 {
+    color: gray;
+}
+
+img:hover {
+    opacity: 0.5;
+}
+
+#div12 {
+    background: url(../images/descarga2.png) no-repeat;
+    background-color: rgb(234, 98, 14)
+}
+
+div.transbox {
+    background-color: #fff;
+    opacity: 0.6;
+}
+
+div.transbox p {
+    margin-top: 55px;
+    font-size: 80%;
+    color: #000;
+}

@@ -1,0 +1,6 @@
+/* Selecciona los elementos p dentro de divs */
+
+div>p {
+    color: red;
+    background-color: yellow
+}

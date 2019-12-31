@@ -1,0 +1,6 @@
+/* Selecciona los elementos p adyacentes a divs */
+
+div+p {
+    color: red;
+    background-color: yellow
+}

@@ -1,0 +1,21 @@
+/* Selecciona el elemento a del atributo href que comience con http */
+
+a[href^=http] {
+    color: red;
+}
+
+
+/*Elemento a del atributo href termine con .html */
+
+a[href$=".html"] {
+    color: blueviolet;
+}
+
+
+/*Elemento a del atributo href termine con .html */
+
+a[href$=".png"] {
+    background: url(../images/descarga.png) no-repeat right;
+    padding-right: 25px;
+    color: darkred;
+}
