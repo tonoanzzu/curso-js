@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Orientacion</title>
+    <style>
+        @media screen and (orientation:portrait) {
+            /* // CSS applied when the device is in portrait mode */
+            .portraitClass {
+                color: red;
+            }
+            .landscapeClass {
+                color: white;
+            }
+        }
+        
+        @media screen and (orientation:landscape) {
+            /* // CSS applied when the device is in landscape mode */
+            .portraitClass {
+                color: white;
+            }
+            .landscapeClass {
+                color: blue;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Orientacion</h1>
+    <p>El color cambia con respecto a la perspectiva: </p>
+    <p class="portraitClass">El dispositivo esta en Portrait</p>
+    <p class="landscapeClass">El dispositivo esta en LandScape</p>
+</body>
+
+</html>
